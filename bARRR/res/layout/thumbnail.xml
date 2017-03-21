@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+     android:background="@drawable/bg">
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dip"
+        android:layout_marginTop="5dip" >
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/viewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bar Name"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <CheckBox
+                android:id="@+id/CheckBox1"
+                android:layout_width="35dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:button="@drawable/ratingbar_full_empty" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="5dip" >
+    
+    <ImageView
+        android:id="@+id/mapThumbnail"
+        android:layout_width="160dip"
+        android:layout_height="160dip"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:onClick="onClick"
+        android:src="@drawable/map_default"
+        android:text="Map Thumbnail" />
+
+    <TextView
+        android:id="@+id/view1"
+        android:layout_width="120dip"
+        android:layout_height="90dip"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/mapThumbnail"
+        android:text="Address:" android:textSize="15dip"/>
+
+    <TextView
+        android:id="@+id/view3"
+        android:layout_width="fill_parent"
+        android:layout_height="90dip"
+        android:layout_below="@+id/NavigationButton"
+        android:text="Bar description:"
+        android:textSize="15dip" />
+
+    <TextView
+        android:id="@+id/view4"
+        android:layout_width="150dip"
+        android:layout_height="180dip"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/view3"
+        android:text="View 4"
+        android:textSize="17dip" />
+
+    <TextView
+        android:id="@+id/view5"
+        android:layout_width="20dip"
+        android:layout_height="80dip"
+        android:layout_alignBottom="@+id/view4"
+        android:layout_alignParentRight="true"
+        android:layout_alignRight="@id/view4"
+        android:layout_alignTop="@+id/view4"
+        android:layout_toRightOf="@+id/view4"
+        android:text="View 5"
+        android:textSize="20dip" android:layout_marginLeft="10dip"/>
+
+    <ImageButton
+        android:id="@+id/NavigationButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mapThumbnail"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="25dp"
+        android:onClick="onClick"
+        android:src="@drawable/ic_menu_directions" android:background="@android:color/transparent"/>
+
+    <TextView
+        android:id="@+id/distanceView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/NavigationButton"
+        android:layout_alignLeft="@+id/view5"
+        android:text="Distance" android:layout_marginBottom="12dip" android:textStyle="bold" android:textSize="15dip"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="120dip"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/view1"
+        android:layout_alignRight="@+id/view1"
+        android:layout_below="@+id/view1"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textPhone"
+            android:layout_width="120dip"
+            android:layout_height="wrap_content"
+            android:text="Phone number"
+            android:textSize="15dip" android:layout_marginBottom="3dip" android:onClick="onClick" android:clickable="true"/>
+
+        <TextView
+            android:id="@+id/textEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email" android:textSize="15dip" android:layout_marginBottom="3dip" android:onClick="onClick" android:clickable="true"/>
+
+        <TextView
+            android:id="@+id/textWeb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Website" android:textSize="15dip" android:onClick="onClick" android:clickable="true"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/mapThumbnail"
+        android:layout_alignRight="@+id/mapThumbnail"
+        android:src="@drawable/street_view_icon_mini" android:layout_marginBottom="5dip"/>
+
+</RelativeLayout>
+ 
+</LinearLayout>    

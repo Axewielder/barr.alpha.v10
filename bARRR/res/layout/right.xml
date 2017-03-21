@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#000000"
+    android:padding="5dip" >
+
+    <ImageView
+        android:id="@+id/mapThumbnailX"
+        android:layout_width="180dip"
+        android:layout_height="180dip"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:onClick="onClick"
+        android:src="@drawable/map_default"
+        android:text="Map Thumbnail" />
+        
+
+    <TextView
+        android:id="@+id/view1X"
+        android:layout_width="120dip"
+        android:layout_height="90dip"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/mapThumbnailX"
+        android:textSize="20dip"
+        android:text="View 1" />
+
+    <TextView
+        android:id="@+id/view2X"
+        android:layout_width="120dip"
+        android:layout_height="90dip"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/view1X"
+        android:layout_toLeftOf="@id/mapThumbnailX"
+        android:textSize="15dip"
+        android:text="View 2" />
+
+    <TextView
+        android:id="@+id/view3X"
+        android:layout_width="fill_parent"
+        android:layout_height="120dip"
+        android:layout_below="@id/mapThumbnailX"
+        android:textSize="15dip"
+        android:text="View 3" />
+
+    <TextView
+        android:id="@+id/view4X"
+        android:layout_width="130dip"
+        android:layout_height="180dip"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/view3X"
+        android:text="View 4" />
+
+    <TextView
+        android:id="@+id/view5X"
+        android:layout_width="20dip"
+        android:layout_height="100dip"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/view4X"
+        android:layout_toRightOf="@+id/view2X"
+        android:text="View 5" />
+
+    <TextView
+        android:id="@+id/view6X"
+        android:layout_width="120dip"
+        android:layout_height="90dip"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/view5X"
+        android:layout_toRightOf="@id/view4X"
+        android:text="View 6" />
+
+</RelativeLayout>    

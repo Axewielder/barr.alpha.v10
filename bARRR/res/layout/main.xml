@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"   
+               android:id="@+id/my_tabhost"   
+               android:layout_width="fill_parent"   
+               android:layout_height="fill_parent"
+               >
+     
+              <RelativeLayout
+                  android:layout_width="fill_parent"
+                  android:layout_height="467dp"
+                  android:layout_gravity="bottom"
+                  android:background="#EFF3F4"
+                  android:orientation="vertical" >
+
+                  <FrameLayout
+                      android:id="@android:id/tabcontent"
+                      android:layout_width="fill_parent"
+                      android:layout_height="fill_parent" >
+
+                  </FrameLayout>
+       
+              </RelativeLayout>
+
+              <LinearLayout
+                  android:id="@+id/title_bar"
+                  android:layout_width="match_parent"
+                  android:layout_height="64px"
+                  android:orientation="vertical" android:background="@drawable/title_bar_v3">
+              </LinearLayout>
+
+              <SlidingDrawer
+                  android:id="@+id/slidingDrawer1"
+                  android:layout_width="match_parent"
+                  android:layout_height="468dp"
+                  android:content="@+id/content"
+                  android:handle="@+id/handle" >
+
+                  <Button
+                      android:id="@+id/handle"
+                      android:layout_width="wrap_content"
+                      android:layout_height="0dp"
+                      android:text="Handle" />
+
+                  <LinearLayout
+                      android:id="@+id/content"
+                      android:layout_width="match_parent"
+                      android:layout_height="452dp" >
+
+                      <RelativeLayout
+                          android:id="@+id/relativeLayout1"
+                          android:layout_width="wrap_content"
+                          android:layout_height="match_parent" >
+
+                          <!-- Dummy item to prevent AutoCompleteTextView from receiving focus -->
+<LinearLayout
+    android:focusable="true" android:focusableInTouchMode="true"
+    android:layout_width="0px" android:layout_height="0px" android:id="@+id/Main_LinearLayout"/>
+
+<!-- :nextFocusUp and :nextFocusLeft have been set to the id of this component
+     to prevent the dummy from receiving focus again -->
+<AutoCompleteTextView android:id="@+id/autotext"
+    android:layout_width="fill_parent" android:layout_height="wrap_content"
+    android:nextFocusUp="@id/autotext" android:nextFocusLeft="@id/autotext"/>
+    
+    <com.google.android.maps.MapView
+        android:id="@+id/mapview2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/linearLayout1"
+        android:apiKey="0cKHuUvRR4EHDzu6DRP84W_6num-5LBdxwcI8ag"
+        android:clickable="true"
+        android:onClick="mapClickHandler" />
+
+    <LinearLayout android:id="@+id/layout_zoom"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_alignParentBottom="true"
+    	android:layout_marginBottom="35px"
+    	android:layout_alignParentRight="true" /> 
+    
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="42dip"
+        android:layout_alignParentTop="true" android:background="#F2F2F2">
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="fill_parent"
+            android:layout_height="39dip"
+            android:layout_weight="1"
+            android:imeOptions="actionSearch"
+            android:inputType="text" android:textSize="16sp" android:textColor="#858585" android:paddingLeft="32dip" android:hint="Set Start Point" android:includeFontPadding="true" android:layout_marginTop="4dip" android:layout_marginLeft="2dip" android:focusable="true" android:focusableInTouchMode="true"/>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="180px"
+            android:layout_height="67px" >
+
+            <ImageButton
+                android:id="@+id/button1"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:onClick="buttonClickHandler" android:layout_marginTop="5px"
+                android:src="@drawable/ic_menu_mylocation"
+                />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_height="40dip" android:layout_width="40dip"
+                android:onClick="buttonClickHandler" android:text="List View" android:layout_marginTop="5px" android:layout_weight="1" android:layout_marginLeft="-9dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+                      </RelativeLayout>
+                  </LinearLayout>
+              </SlidingDrawer>
+          
+<TableLayout android:id="@+id/linearLayoutMenu" 
+              android:layout_width="match_parent" 
+              android:layout_height="wrap_content" 
+              android:gravity="bottom"
+              android:layout_gravity="bottom"
+              android:stretchColumns="0,1,2,3,4" >
+                       <TableRow
+                        android:baselineAligned="true"
+                        android:gravity="bottom" 
+              			android:layout_gravity="bottom" >
+                           
+								<ImageView 
+		                          android:id="@+id/imageButton1" 
+		                          android:layout_width="fill_parent" 
+		                          android:layout_height="wrap_content"
+		                          android:scaleType="fitXY"
+		                          android:onClick="onClick" 
+		                          android:src="@drawable/menu_update_focused"/>
+		                          
+		                          <ImageView 
+		                          android:id="@+id/imageButton2" 
+		                          android:layout_width="fill_parent" 
+		                          android:layout_height="wrap_content" 
+		                          android:scaleType="fitXY"
+		                          android:onClick="onClick" android:src="@drawable/menu_filter_unfocused" />
+		
+		                          <ImageView 
+		                          android:id="@+id/imageButton3" 
+		                          android:layout_width="fill_parent"
+		                          android:layout_height="wrap_content"
+		                          android:scaleType="fitXY"
+		                          android:onClick="onClick" android:src="@drawable/menu_map_unfocused" />
+		
+		                          <ImageView 
+		                          android:id="@+id/imageButton4" 
+		                          android:layout_width="fill_parent" 
+		                          android:layout_height="wrap_content" 
+		                          android:scaleType="fitXY"
+		                          android:onClick="onClick" android:src="@drawable/menu_favorite_unfocused" />
+		
+		                          <ImageView 
+		                          android:id="@+id/imageButton5" 
+		                          android:layout_width="fill_parent" 
+		                          android:layout_height="wrap_content" 
+		                          android:scaleType="fitXY"
+		                          android:onClick="onClick" android:src="@drawable/menu_social_unfocused" />
+		           						           
+		           <TabWidget 
+		           android:id="@android:id/tabs" 
+		           android:layout_width="fill_parent" 
+		           android:layout_height="wrap_content" 
+		           android:visibility="gone">
+                  </TabWidget>
+                       </TableRow> 
+                  </TableLayout>
+
+</TabHost>

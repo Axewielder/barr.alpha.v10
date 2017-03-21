@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+	android:layout_width="wrap_content" 
+	android:layout_height="wrap_content"
+	android:orientation="horizontal" 
+	android:minWidth="150dip" 
+	android:id="@+id/balloon_main_layout"
+	android:background="@drawable/balloon_overlay_bg_selector"
+>
+
+    <ImageView
+        android:id="@+id/balloon_item_image"
+        android:layout_width="42dip"
+        android:layout_height="42dip"
+        android:layout_weight="1.0"
+        android:src="@drawable/icon" android:layout_gravity="top" android:layout_marginTop="5dip"/>
+
+        <LinearLayout android:gravity="left|center" 
+            android:orientation="vertical" 
+            android:id="@id/balloon_inner_layout" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:layout_weight="1.0" 
+            android:layout_toRightOf="@+id/balloon_item_image" android:layout_marginLeft="5dip">
+
+            <TextView
+                android:id="@+id/balloon_item_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="balloon_item_title"
+                android:textColor="#FFFFFF"
+                android:textSize="16.0sp" />
+
+            <TextView
+                android:id="@+id/balloon_item_snippet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="balloon_item_snippet"
+                android:textColor="#F2F2F2"
+                android:textSize="12.0sp" />
+
+    </LinearLayout>
+
+        <ImageView android:id="@id/balloon_close" 
+            android:paddingLeft="5.0dip" 
+            android:clickable="true" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:background="@drawable/balloon_overlay_close_selector"
+            android:layout_toRightOf="@id/balloon_inner_layout" android:layout_marginLeft="10dip"/>
+
+</LinearLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Preference android:key="about" android:title="About"/><Preference android:title="JSON Twitter Test" android:key="jsontw" /><Preference android:title="JSON FB Test" android:key="jsonfb" /><Preference android:title="Map Thumbnail" android:key="mapthumbnail" />
+    
+    <Preference android:title="HackBook" android:key="hackbook" /><Preference android:title="AwesomePager" android:key="awesomepager" /><PreferenceCategory android:key="logging" android:title="Logging"><Preference android:title="MapLogger" android:key="maplogger" /><Preference android:title="AddMarkers" android:key="marker" /></PreferenceCategory><PreferenceCategory 
+        android:title="First Category"
+        android:key="first_category"><Preference android:title="ListViewActivity" android:key="listview" />
+        
+        <CheckBoxPreference 
+            android:key="perform_updates"
+            android:summary="Enable or disable data updates"
+            android:title="Enable updates" 
+            android:defaultValue="true"
+        />
+        
+        <ListPreference 
+            android:key="updates_interval"
+            android:title="Updates interval"
+            android:summary="Define how often updates will be performed"
+            android:defaultValue="1000" 
+            android:entries="@array/updateInterval"
+            android:entryValues="@array/updateIntervalValues"
+            android:dependency="perform_updates"
+        />    
+            
+    </PreferenceCategory>
+
+    <PreferenceCategory 
+        android:title="Second Category"
+        android:key="second_category">
+
+        <EditTextPreference
+            android:key="welcome_message"
+            android:title="Welcome Message" 
+            android:summary="Define the Welcome message to be shown"
+            android:dialogTitle="Welcome Message"
+            android:dialogMessage="Provide a message"    
+            android:defaultValue="Default welcome message" />
+
+    </PreferenceCategory>
+    
+    
+    
+    
+    
+    
+    
+    
+</PreferenceScreen>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:layout_marginTop="10dip">
+
+        <SeekBar
+            android:id="@+id/distanceBar"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:max="25"/>
+
+        <EditText
+            android:id="@+id/distanceText"
+            android:layout_width="50dp"
+            android:layout_height="32dp"
+            android:inputType="number"
+            android:text="0"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/parseButton"
+            android:layout_width="50dp"
+            android:layout_height="32dp"
+            android:gravity="center"
+            android:text="Get" android:onClick="onClick" android:textSize="12sp" android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+   
+</LinearLayout>

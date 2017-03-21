@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="it.levitate.bARRR"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="8" />
+    
+  	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.VIBRATE" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+	<uses-permission android:name="android.permission.CALL_PHONE" /> 
+	<uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+	<uses-permission android:name="android.permission.CALL_PHONE" />
+	
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        >
+        <activity
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:name=".TabLayoutActivity" 
+            android:screenOrientation="portrait" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        		<activity android:name=".HomeActivity" android:label="@string/app_name"></activity>
+        		<activity android:name=".FilterActivity" android:label="@string/app_name"></activity>
+        		<activity android:name=".mapOverlay.MapAppActivity" android:label="@string/app_name"></activity>
+         		<activity android:name=".FavoriteActivity" android:label="@string/app_name"></activity>
+         		<activity android:name=".social.SocialActivity" android:label="@string/app_name"></activity>
+         		<activity android:name=".social.OnlineFriends" android:label="@string/app_name"></activity>
+         		<activity android:name=".AwesomePagerActivity" android:label="@string/app_name"></activity>
+         		<activity android:name=".mapOverlay.PinPoint" android:label="@string/app_name"></activity>
+         		<activity android:name=".SettingsActivity" android:label="@string/app_name"></activity>
+         		<activity android:name=".listView.ListViewActivity" android:label="@string/app_name"></activity>
+         		<activity android:name=".listView.EmployeeDetails"></activity>
+    			<activity android:name=".listView.DirectReports"></activity>
+         		<activity android:name=".mapOverlay.MapLoggerActivity" android:label="@string/app_name"></activity>
+         		<activity android:name=".mapOverlay.AddMarkersActivity" android:label="@string/app_name"></activity>
+         		<activity android:name=".MapThumbnail" android:label="@string/app_name" android:screenOrientation="portrait"></activity>
+         		<activity android:name=".JSONtw" android:label="@string/app_name"></activity>
+         		<activity android:name=".JSONfb" android:label="@string/app_name"></activity>
+         		<activity android:name="com.facebook.android.SplashActivity" 
+		    android:label="@string/app_name"
+		    android:screenOrientation="portrait">
+		</activity>
+		<activity android:name="com.facebook.android.Hackbook" 
+		    android:label="@string/app_name"
+		    android:configChanges="keyboardHidden"
+		    android:screenOrientation="portrait">
+		</activity>
+		<activity 
+			android:name="com.facebook.android.GraphExplorer"
+			android:windowSoftInputMode="stateHidden"
+		    android:screenOrientation="portrait" />
+	    <activity android:name=".IntentUriHandler">
+	    	<intent-filter>
+		        <action android:name="android.intent.action.VIEW" />
+		        <category android:name="android.intent.category.DEFAULT" />
+		        <data android:scheme="fbgraphex" />
+	      	</intent-filter>
+	    </activity>
+		<activity 
+			android:name="com.facebook.android.FriendsList"
+			android:screenOrientation="portrait" />
+		<activity 
+			android:name="com.facebook.android.Places"
+			android:screenOrientation="portrait" />
+         		
+    <uses-library android:name="com.google.android.maps" />     		
+    </application>
+	
+
+</manifest>

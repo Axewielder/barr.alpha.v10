@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:layout_marginBottom="-50dip" >
+
+        <Button
+            android:id="@+id/b1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Toggle" android:onClick="drawerHandler"/>
+
+        <Button
+            android:id="@+id/b2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SlideDown" android:onClick="drawerHandler" android:layout_marginLeft="170dip"/>
+
+    </LinearLayout>
+
+    <SlidingDrawer
+        android:id="@+id/slidingDrawer1"
+        android:layout_width="match_parent"
+        android:layout_height="468dp"
+        android:content="@+id/content"
+        android:handle="@+id/handle" >
+
+        <Button
+            android:id="@+id/handle"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:text="Handle"/>
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="452dp" >
+
+            <com.google.android.maps.MapView
+                android:id="@+id/mapview2"
+                android:layout_width="fill_parent"
+                android:layout_height="440dp"
+                android:apiKey="0cKHuUvRR4EHDzu6DRP84W_6num-5LBdxwcI8ag"
+                android:clickable="true"
+                android:onClick="mapClickHandler" />
+
+        </LinearLayout>
+    </SlidingDrawer>
+
+</LinearLayout>
